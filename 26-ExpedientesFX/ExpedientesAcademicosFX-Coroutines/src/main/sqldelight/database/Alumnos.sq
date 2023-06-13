@@ -1,0 +1,41 @@
+-- Tabla de Alumnos
+CREATE TABLE IF NOT EXISTS AlumnoEntity (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    apellidos  TEXT    NOT NULL,
+    nombre TEXT NOT NULL,
+    email TEXT NOT NULL,
+    fechaNacimiento TEXT NOT NULL,
+    calificacion REAL NOT NULL,
+    repetidor INTEGER NOT NULL,
+    imagen TEXT NOT NULL
+);
+
+-- Datos de prueba
+INSERT INTO AlumnoEntity (apellidos, nombre, email, fechaNacimiento, calificacion, repetidor, imagen)
+VALUES ('García Pérez', 'Juan', 'juan@correo.com', '1990-01-01', 7.5, 0, '1682763355431.png'),
+         ('López Gómez', 'María', 'maria@correo.com', '1991-02-02', 8.5, 0, '1682763355432.png'),
+         ('González Álvarez', 'Luis', 'luis@correo.com', '1990-03-03', 9.5, 1, '1682763355433.png'),
+         ('Rodríguez Fernández', 'Ana', 'ana@correo.com', '1992-04-04', 5.5, 0, '1682763355434.png'),
+         ('Martínez Sánchez', 'José', 'jose@correo.com', '1991-05-05', 2.5, 1, '1682763355435.png'),
+         ('Sánchez Díaz', 'Carmen', 'carma@correo.com', '1992-06-06', 3.5, 0,'sin-imagen.png');
+
+deleteAll:
+DELETE FROM AlumnoEntity;
+
+selectAll:
+SELECT * FROM AlumnoEntity ORDER BY apellidos ASC;
+
+selectById:
+SELECT * FROM AlumnoEntity WHERE id = ?;
+
+selectLastInserted:
+SELECT * FROM AlumnoEntity WHERE id = last_insert_rowid();
+
+insert:
+INSERT INTO AlumnoEntity (apellidos, nombre, email, fechaNacimiento, calificacion, repetidor, imagen) VALUES (?, ?, ?, ?, ?, ?, ?);
+
+update:
+UPDATE AlumnoEntity SET apellidos = ?, nombre = ?, email = ?, fechaNacimiento = ?, calificacion = ?, repetidor = ?, imagen = ? WHERE id = ?;
+
+delete:
+DELETE FROM AlumnoEntity WHERE id = ?;

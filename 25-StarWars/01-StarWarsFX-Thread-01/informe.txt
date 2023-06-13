@@ -1,0 +1,14 @@
+Informe de la simulacion
+Tiempo total de la simulacion: 30 s
+Droides enemigos totales: 10
+Droides enemigos muertos: 1
+Droides enemigos vivos: 9
+Disparos realizados: 30
+Aciertos: 11
+Procentaje de aciertos: 36 %
+Enemigos por energia
+Enemigos ordenados por energia: [M: SW4421, E: -13, V: 100, M: SW348, E: 65, NS: b21e0, M: SW4421, E: 99, V: 100, M: SW348, E: 100, NS: ded15, M: SW348, E: 100, NS: acb15, M: SW4421, E: 101, V: 100, M: SW4421, E: 102, V: 100, M: SW4421, E: 106, V: 100, M: SW4421, E: 108, V: 100, M: SW4421, E: 141, V: 100]
+Enemigos por modelo
+Enemigos ordenados por modelo: [M: SW348, E: 100, NS: ded15, M: SW348, E: 65, NS: b21e0, M: SW348, E: 100, NS: acb15, M: SW4421, E: 102, V: 100, M: SW4421, E: 108, V: 100, M: SW4421, E: -13, V: 100, M: SW4421, E: 106, V: 100, M: SW4421, E: 101, V: 100, M: SW4421, E: 99, V: 100, M: SW4421, E: 141, V: 100]
+Enemigos vivos: 9
+Enemigos muertos: 1

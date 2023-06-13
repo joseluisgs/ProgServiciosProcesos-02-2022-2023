@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="440.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/19"
+      fx:controller="dev.joseluisgs.starwarsfx.controllers.StarWarsViewConroller">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="Archivo">
+            <MenuItem fx:id="menuInforme" mnemonicParsing="false" text="Guardar Informe">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/file-import.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem fx:id="menuSalir" mnemonicParsing="false" text="Salir">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/exit.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ayuda">
+            <MenuItem fx:id="menuAcercaDe" mnemonicParsing="false" text="Acerca de Star Wars DAM">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/about.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+        </Menu>
+    </MenuBar>
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <SplitPane dividerPositions="0.45132743362831856" layoutX="61.0" layoutY="42.0" prefHeight="373.0"
+                   prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="411.0" prefWidth="322.0">
+                <VBox prefHeight="449.0" prefWidth="361.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+                      AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <HBox alignment="CENTER" prefHeight="95.0" prefWidth="358.0">
+                        <ImageView fitHeight="69.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../icons/app.png"/>
+                        </ImageView>
+                        <Label text="Star Wars: Clone Wars">
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                    </HBox>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0"
+                                               prefWidth="133.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="195.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Label text="Dimension:"/>
+                        <Label text="Droides:" GridPane.rowIndex="1"/>
+                        <Label text="Tiempo (s):" GridPane.rowIndex="2"/>
+                        <Spinner fx:id="spinnerDimension" GridPane.columnIndex="1"/>
+                        <Spinner fx:id="spinnerDroides" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Spinner fx:id="spinnerTiempo" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    </GridPane>
+                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="338.0">
+                        <VBox.margin>
+                            <Insets top="25.0"/>
+                        </VBox.margin>
+                        <Button fx:id="botonComenzar" mnemonicParsing="false" text="Comenzar"/>
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT" prefHeight="116.0" prefWidth="371.0">
+                        <ImageView fitHeight="141.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../images/rd2d2-guru.png"/>
+                        </ImageView>
+                    </HBox>
+                </VBox>
+            </AnchorPane>
+            <VBox prefHeight="429.0" prefWidth="477.0" spacing="5.0">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <Label text="Operación:"/>
+                <TextArea fx:id="textOperacion" editable="false" prefHeight="107.0" prefWidth="443.0">
+                    <font>
+                        <Font name="Andale Mono" size="11.0"/>
+                    </font>
+                </TextArea>
+                <HBox alignment="CENTER" prefHeight="44.0" prefWidth="288.0" spacing="5.0">
+                    <Label text="Disparos:"/>
+                    <TextField fx:id="textDisparos" editable="false" prefHeight="26.0" prefWidth="85.0">
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </TextField>
+                    <Label text="Aciertos:"/>
+                    <TextField fx:id="textAciertos" editable="false" prefHeight="26.0" prefWidth="96.0"/>
+                    <Label text="Muertos:"/>
+                    <TextField fx:id="textMuertos" editable="false" prefHeight="26.0" prefWidth="89.0"/>
+                </HBox>
+                <Label text="Cuadrante:"/>
+                <TextArea fx:id="textCuadrante" editable="false" prefHeight="184.0" prefWidth="349.0">
+                    <font>
+                        <Font name="Andale Mono" size="13.0"/>
+                    </font>
+                </TextArea>
+                <HBox alignment="CENTER" prefHeight="37.0" prefWidth="457.0" spacing="5.0">
+                    <Label text="Tiempo:"/>
+                    <TextField fx:id="textTiempo" editable="false" prefHeight="26.0" prefWidth="88.0"/>
+                    <Label text="(s)"/>
+                    <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="251.0" progress="0.0"/>
+                </HBox>
+            </VBox>
+        </SplitPane>
+    </AnchorPane>
+</VBox>

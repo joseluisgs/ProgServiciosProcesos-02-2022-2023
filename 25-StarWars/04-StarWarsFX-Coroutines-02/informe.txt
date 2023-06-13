@@ -1,0 +1,15 @@
+Informe de la simulacion
+Tiempo total de la simulacion: 120 s
+Dimensión de la cuadrícula: 8 x  8 
+Droides enemigos totales: 25
+Droides enemigos muertos: 4
+Droides enemigos vivos: 21
+Disparos realizados: 120
+Aciertos: 43
+Procentaje de aciertos: 35,833 %
+Enemigos por energia
+Enemigos ordenados por energia: [M: SW447, E: -7, D: 9, M: SW447, E: -7, D: 6, M: SW348, E: -4, NS: b152d, M: SW348, E: 0, NS: 6e1b5, M: SW447, E: 16, D: 8, M: SW447, E: 20, D: 10, M: SW348, E: 27, NS: 1639b, M: SW447, E: 33, D: 8, M: SW447, E: 34, D: 9, M: SW447, E: 34, D: 9, M: SW447, E: 34, D: 9, M: SW4421, E: 37, V: 100, M: SW348, E: 48, NS: a3919, M: SW348, E: 57, NS: 8afe4, M: SW348, E: 61, NS: 15d91, M: SW348, E: 62, NS: a4a26, M: SW348, E: 69, NS: 06320, M: SW348, E: 69, NS: 14810, M: SW4421, E: 78, V: 100, M: SW4421, E: 79, V: 100, M: SW348, E: 79, NS: 81538, M: SW348, E: 86, NS: c7c56, M: SW348, E: 100, NS: a0caa, M: SW348, E: 100, NS: e2b16, M: SW348, E: 100, NS: 6ee35]
+Enemigos por modelo
+Enemigos ordenados por modelo: [M: SW348, E: 69, NS: 06320, M: SW348, E: 86, NS: c7c56, M: SW348, E: 0, NS: 6e1b5, M: SW348, E: 100, NS: a0caa, M: SW348, E: 48, NS: a3919, M: SW348, E: 27, NS: 1639b, M: SW348, E: 100, NS: e2b16, M: SW348, E: 57, NS: 8afe4, M: SW348, E: -4, NS: b152d, M: SW348, E: 62, NS: a4a26, M: SW348, E: 69, NS: 14810, M: SW348, E: 100, NS: 6ee35, M: SW348, E: 61, NS: 15d91, M: SW348, E: 79, NS: 81538, M: SW447, E: 33, D: 8, M: SW447, E: 16, D: 8, M: SW447, E: 34, D: 9, M: SW447, E: 20, D: 10, M: SW447, E: -7, D: 9, M: SW447, E: -7, D: 6, M: SW447, E: 34, D: 9, M: SW447, E: 34, D: 9, M: SW4421, E: 79, V: 100, M: SW4421, E: 78, V: 100, M: SW4421, E: 37, V: 100]
+Enemigos vivos: 21
+Enemigos muertos: 4

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="440.0" prefWidth="680.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      fx:controller="dev.joseluisgs.expedientesacademicos.controllers.ExpedientesViewConroller">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="Archivo">
+            <MenuItem fx:id="menuImportar" mnemonicParsing="false" text="Importar desde Json">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/file-import.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+            <MenuItem fx:id="menuExportar" mnemonicParsing="false" text="Exportar a Json">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../icons/file-export.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem fx:id="menuUnzip" mnemonicParsing="false" text="Importar desde Zip">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/unzip.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+            <MenuItem fx:id="menuZip" mnemonicParsing="false" text="Exportar a Zip">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/zip.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem fx:id="menuSalir" mnemonicParsing="false" text="Salir">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/exit.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ayuda">
+            <MenuItem fx:id="menuAcercaDe" mnemonicParsing="false" text="Acerca de Expedientes DAM">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/about.png"/>
+                    </ImageView>
+                </graphic>
+            </MenuItem>
+        </Menu>
+    </MenuBar>
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <SplitPane dividerPositions="0.5329428989751098" layoutX="61.0" layoutY="42.0" prefHeight="373.0"
+                   prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="444.0">
+                <VBox prefHeight="449.0" prefWidth="361.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <HBox alignment="CENTER" prefHeight="47.0" prefWidth="332.0">
+                        <Label text="Nombre:">
+                            <HBox.margin>
+                                <Insets right="10.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textBuscador" prefHeight="26.0" prefWidth="149.0">
+                            <HBox.margin>
+                                <Insets right="10.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <ComboBox fx:id="comboTipo" prefHeight="26.0" prefWidth="115.0"/>
+                        <padding>
+                            <Insets bottom="5.0" top="5.0"/>
+                        </padding>
+                    </HBox>
+                    <TableView fx:id="tableAlumnos" prefHeight="381.0" prefWidth="361.0">
+                        <columns>
+                            <TableColumn fx:id="tableColumnNumero" editable="false" prefWidth="53.0" text="Num"/>
+                            <TableColumn fx:id="tableColumNombre" editable="false" prefWidth="239.0" text="Nombre"/>
+                            <TableColumn fx:id="tableColumnCalificacion" editable="false" prefWidth="65.0"
+                                         text="Calif."/>
+                        </columns>
+                    </TableView>
+                    <HBox alignment="CENTER" prefHeight="87.0" prefWidth="358.0">
+                        <children>
+                            <Label text="Num Apr:">
+                                <padding>
+                                    <Insets right="5.0"/>
+                                </padding>
+                            </Label>
+                            <TextField fx:id="textNumAprobados" editable="false" prefHeight="26.0" prefWidth="90.0">
+                                <opaqueInsets>
+                                    <Insets/>
+                                </opaqueInsets>
+                                <HBox.margin>
+                                    <Insets right="10.0"/>
+                                </HBox.margin>
+                            </TextField>
+                            <Label text="Nota Media:">
+                                <HBox.margin>
+                                    <Insets right="5.0"/>
+                                </HBox.margin>
+                            </Label>
+                            <TextField fx:id="textNotaMedia" editable="false" prefHeight="26.0" prefWidth="90.0"/>
+                        </children>
+                    </HBox>
+                </VBox>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="351.0">
+                <Label layoutX="18.0" layoutY="25.0" text="Ficha Alumno/a" AnchorPane.leftAnchor="18.0"
+                       AnchorPane.topAnchor="25.0">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Label>
+                <ImageView fx:id="imageAlumno" fitHeight="100.0" fitWidth="100.0" layoutX="199.0" layoutY="14.0"
+                           pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="16.0"
+                           AnchorPane.topAnchor="14.0">
+                    <Image url="@../images/sin-imagen.png"/>
+                </ImageView>
+                <GridPane layoutX="18.0" layoutY="131.0" prefWidth="288.0" AnchorPane.leftAnchor="15.0"
+                          AnchorPane.rightAnchor="15.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="80.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="204.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Núm:"/>
+                        <Label text="Nombre:" GridPane.rowIndex="2"/>
+                        <Label text="E-Mail:" GridPane.rowIndex="3"/>
+                        <Label text="Calificación:" GridPane.rowIndex="5"/>
+                        <Label text="Repetidor:" GridPane.rowIndex="6"/>
+                        <TextField fx:id="textAlumnoNumero" editable="false" prefHeight="26.0" prefWidth="156.0"
+                                   GridPane.columnIndex="1"/>
+                        <TextField fx:id="textAlumnoNombre" editable="false" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="2"/>
+                        <TextField fx:id="textAlumnoEmail" editable="false" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="3"/>
+                        <TextField fx:id="textAlumnoCalificacion" editable="false" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="5"/>
+                        <Label text="Facha Nac:" GridPane.rowIndex="4"/>
+                        <DatePicker fx:id="dateAlumnoFechaNacimiento" disable="true" editable="false"
+                                    GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <CheckBox fx:id="checkAlumnoRepetidor" disable="true" mnemonicParsing="false" text="Sí"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                        <Label text="Apellidos:" GridPane.rowIndex="1"/>
+                        <TextField fx:id="textAlumnoApellidos" editable="false" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="1"/>
+                    </children>
+                </GridPane>
+                <HBox alignment="CENTER" layoutX="15.0" layoutY="358.0" prefHeight="46.0" prefWidth="294.0"
+                      AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <Button fx:id="btnNuevo" mnemonicParsing="false" text="Nuevo" HBox.hgrow="SOMETIMES">
+                            <HBox.margin>
+                                <Insets right="5.0"/>
+                            </HBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/new.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnEditar" mnemonicParsing="false" text="Editar">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0"/>
+                            </HBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/edit.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnEliminar" mnemonicParsing="false" text="Eliminar">
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/delete.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+</VBox>

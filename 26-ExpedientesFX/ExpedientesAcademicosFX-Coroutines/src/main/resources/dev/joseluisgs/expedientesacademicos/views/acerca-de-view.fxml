@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="155.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.joseluisgs.expedientesacademicos.controllers.AcercaDeViewController">
+    <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="24.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../icons/app-icon.png" />
+    </ImageView>
+    <Label layoutX="175.0" layoutY="23.0" text="Expedientes DAM">
+        <font>
+            <Font name="System Bold" size="21.0" />
+        </font>
+    </Label>
+    <Label layoutX="183.0" layoutY="54.0" text="Programación 1º DAM">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Hyperlink fx:id="linkGitHub" layoutX="253.0" layoutY="85.0" text="GitHub">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Hyperlink>
+    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="217.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../icons/github.png" />
+    </ImageView>
+</AnchorPane>

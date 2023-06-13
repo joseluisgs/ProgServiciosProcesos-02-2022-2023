@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "apellidos": "García Pérez",
+    "nombre": "Juan",
+    "email": "juan@correo.com",
+    "fechaNacimiento": "1990-01-01",
+    "calificacion": 7.5,
+    "repetidor": false,
+    "imagen": "1682763355431.png"
+  },
+  {
+    "id": 3,
+    "apellidos": "González Álvarez",
+    "nombre": "Luis",
+    "email": "luis@correo.com",
+    "fechaNacimiento": "1990-03-03",
+    "calificacion": 9.5,
+    "repetidor": true,
+    "imagen": "1682763355433.png"
+  },
+  {
+    "id": 2,
+    "apellidos": "López Gómez",
+    "nombre": "María",
+    "email": "maria@correo.com",
+    "fechaNacimiento": "1991-02-02",
+    "calificacion": 8.5,
+    "repetidor": false,
+    "imagen": "1682763355432.png"
+  },
+  {
+    "id": 5,
+    "apellidos": "Martínez Sánchez",
+    "nombre": "José",
+    "email": "jose@correo.com",
+    "fechaNacimiento": "1991-05-05",
+    "calificacion": 2.5,
+    "repetidor": true,
+    "imagen": "1682763355435.png"
+  },
+  {
+    "id": 4,
+    "apellidos": "Rodríguez Fernández",
+    "nombre": "Ana",
+    "email": "ana@correo.com",
+    "fechaNacimiento": "1992-04-04",
+    "calificacion": 5.5,
+    "repetidor": false,
+    "imagen": "1682763355434.png"
+  },
+  {
+    "id": 6,
+    "apellidos": "Sánchez Díaz",
+    "nombre": "Carmen",
+    "email": "carma@correo.com",
+    "fechaNacimiento": "1992-06-06",
+    "calificacion": 3.5,
+    "repetidor": false,
+    "imagen": "sin-imagen.png"
+  }
+]

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="155.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.joseluisgs.starwarsfx.controllers.AcercaDeViewController">
+    <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="24.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../icons/app.png" />
+    </ImageView>
+    <Label contentDisplay="CENTER" layoutX="141.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="175.0" text="Star Wars DAM" textAlignment="CENTER">
+        <font>
+            <Font name="System Bold" size="21.0" />
+        </font>
+    </Label>
+    <Label layoutX="140.0" layoutY="45.0" text="Programación 1º DAM">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Hyperlink fx:id="linkGitHub" layoutX="196.0" layoutY="78.0" text="GitHub">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Hyperlink>
+    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="160.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../icons/github.png" />
+    </ImageView>
+   <ImageView fitHeight="81.0" fitWidth="64.0" layoutX="273.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/rd2d2-guru.png" />
+      </image>
+   </ImageView>
+</AnchorPane>
